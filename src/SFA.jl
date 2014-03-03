@@ -1,5 +1,9 @@
 module SFA
 
-# package code goes here
+export linsfa
+
+include("linsfa.jl")
+include("sfautils.jl")
+include("types.jl")
 
 end # module
