@@ -4,11 +4,13 @@
 
 function linsfa(H::Matrix)
     Z = whiten(H)
-    Zdiff = diff(Z, 1)
+    Zdiff = timediff(Z)
     A = Zdiff * Zdiff'
     B = Z * Z'
 
-    evecs = eigfact(A, B)
+    # F = eigfact(A, B)
+    F = eigfact(B, A)
 
-    return SlowSignals(evecs[:vectors])
+    # return SlowSignals(F[:vectors])
+    return F[:vectors]
 end

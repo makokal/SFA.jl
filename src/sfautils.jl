@@ -10,3 +10,17 @@ function whiten(X::Matrix)
     X = X./std(X,1)
     return X
 end
+
+function timediff(X::Matrix)
+    # TODO - add a matlab-like implementation of filter
+    # XD = filter([1 -1], [1], X)
+
+    XD = diff(X, 1)
+    XDD = [X[1, :] ; XD]
+    return XDD
+end
+
+
+function timediff!(X::Matrix)
+    X =  [X[1, :] ; diff(X, 1)]
+end
