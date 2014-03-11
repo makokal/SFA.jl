@@ -18,3 +18,5 @@ slow_signals = linsfa(signal);
 - [ ] Add main `sfa` correspond to the non-linear signal expansion case
 - [ ] Incremental SFA??
 
+
+[![Build Status](https://travis-ci.org/makokal/SFA.jl.png)](https://travis-ci.org/makokal/SFA.jl)
