@@ -1,5 +1,3 @@
-# SFA by linear expansion
-
 
 
 function linsfa(H::Matrix)
