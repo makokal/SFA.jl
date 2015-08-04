@@ -23,8 +23,8 @@ function whiten!(signal::Array{Float64})
 end
 
 function timediff(signal::Array{Float64})
-    xdiff = diff(signal, 1)
-    # xdiffD = [signal[1, :] ; xdiff]
+    # xdiff = diff(signal, 1)
+    xdiff = [signal[1, :] ; diff(signal, 1)]
     return xdiff
 end
 
